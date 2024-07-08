@@ -1,0 +1,14 @@
+name: Manual Approval Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  approve_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run a script
+        run: echo "This job runs only when manually triggered by an approval."
